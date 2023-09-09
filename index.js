@@ -1,15 +1,16 @@
 const express = require('express')
 const cors = require('cors')
+// const cors = require('cors')
 const { GraphQLSchema, GraphQLObjectType, GraphQLString } = require('graphql')
 const { graphqlHTTP } = require('express-graphql')
 const env = require('dotenv')
-const { dbConnection } = require('../database/connection/connection.db')
+const {dbConnection}  = require('./database/connection/connection.db.js')
 const mongoose = require('mongoose')
-const { Intro } = require('../database/schemas/intro.schema')
+const { Intro } =require('./database/schemas/intro.schema.js')
 
-const schema = require('../graphQLschema/index')
-const { Homepage } = require('../database/schemas/homepage.schema')
-const { Contact } = require('../database/schemas/contact.schema')
+const schema = require('./graphQLschema/index.js')
+const { Homepage } = require('./database/schemas/homepage.schema.js')
+const { Contact } = require('./database/schemas/contact.schema.js')
 
 env.config();
 

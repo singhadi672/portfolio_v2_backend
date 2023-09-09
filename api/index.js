@@ -3,13 +3,13 @@ const cors = require('cors')
 const { GraphQLSchema, GraphQLObjectType, GraphQLString } = require('graphql')
 const { graphqlHTTP } = require('express-graphql')
 const env = require('dotenv')
-const { dbConnection } = require('./database/connection/connection.db')
+const { dbConnection } = require('../database/connection/connection.db')
 const mongoose = require('mongoose')
-const { Intro } = require('./database/schemas/intro.schema')
+const { Intro } = require('../database/schemas/intro.schema')
 
-const schema = require('./graphQLschema/index')
-const { Homepage } = require('./database/schemas/homepage.schema')
-const { Contact } = require('./database/schemas/contact.schema')
+const schema = require('../graphQLschema/index')
+const { Homepage } = require('../database/schemas/homepage.schema')
+const { Contact } = require('../database/schemas/contact.schema')
 
 env.config();
 
